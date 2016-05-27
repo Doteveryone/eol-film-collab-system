@@ -1,0 +1,29 @@
+/*
+ * dark: 012F30
+ *
+ *
+ *
+ */
+
+body {
+  font-family: 'Noto Sans', 'Open Sans', Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+[data-screen] {
+  overflow-y: scroll;
+  top: 10vh;
+  height: 90vh;
+}
+
+header {
+  height: 10vh;
+  text-align: center;
+  background: #012F30;
+  color: white;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: normal;
+  padding-top: 0.6em;
+}
