@@ -2,6 +2,7 @@
  * dark: #012F30
  * turquoise: #139B9B
  * dark turquoise: #012F30
+ * light purple: #BBB6CE
  * dark purple: #4D395E
  *
  */
@@ -81,6 +82,16 @@ header h1 {
 .button.active h2 {
   background: #4D395E;
   border-bottom: 1px solid white;
+}
+
+.mode-edit .button h2,
+.mode-edit .button p {
+  background: #BBB6CE;
+}
+
+.mode-edit .button.active h2,
+.mode-edit .button.active p {
+  background: #9793AD;
 }
 
 .bottom-button p {
