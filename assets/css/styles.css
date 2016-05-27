@@ -1,7 +1,8 @@
 /*
- * dark: 012F30
- *
- *
+ * dark: #012F30
+ * turquoise: #139B9B
+ * dark turquoise: #012F30
+ * dark purple: #4D395E
  *
  */
 
@@ -13,6 +14,7 @@ body {
   overflow-y: scroll;
   top: 10vh;
   height: 90vh;
+  padding: 0;
 }
 
 header {
@@ -20,10 +22,71 @@ header {
   text-align: center;
   background: #012F30;
   color: white;
+  -webkit-font-smoothing: antialiased;
 }
 
 header h1 {
   font-size: 32px;
   font-weight: normal;
   padding-top: 0.6em;
+}
+
+[data-accordion-button] i, .bottom-button i {
+  float: right;
+}
+
+[data-accordion] {
+  padding: 1em;
+  margin: 0;
+  background: #4D395E;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+.callme {
+  padding: 1em;
+}
+
+.button {
+  border-top: 1px solid black;
+}
+
+.button.active {
+  border-top: 1px solid white;
+}
+
+.button:last-child {
+  border-bottom: 1px solid black;
+}
+
+.button i {
+  padding-top: 0.22em;
+}
+
+.button h2 {
+  font-size: 22px;
+  padding: 0.8em 1em;
+  margin-bottom: 0;
+  background: #139B9B;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+.button.active h2 {
+  background: #4D395E;
+  border-bottom: 1px solid white;
+}
+
+.bottom-button p {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0.8em 1em;
+  margin-bottom: 0;
+  background: #012F30;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
