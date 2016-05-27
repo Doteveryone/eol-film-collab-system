@@ -18,6 +18,12 @@ body {
   padding: 0;
 }
 
+.fullscreen {
+  top: 0;
+  height: 100vh;
+  padding: 1em;
+}
+
 header {
   height: 10vh;
   text-align: center;
@@ -118,4 +124,47 @@ header h1 {
 
 .metadata dd:last-child {
   margin-bottom: 0;
+}
+
+.question-screen {
+  background: #152D31;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+.question {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.intro {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.steps {
+  margin-bottom: 2em;
+}
+
+.stacked-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stacked-button {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0.8em 1em;
+  margin-bottom: 0;
+  background: #29646D;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+.stacked-button:last-child {
+  background: #43A4B3;
 }
