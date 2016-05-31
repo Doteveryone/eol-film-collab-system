@@ -13,7 +13,7 @@ body {
 
 [data-screen] {
   overflow-y: scroll;
-  top: 10vh;
+  top: 3em;
   height: 90vh;
   padding: 0;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 header {
-  height: 10vh;
+  height: 3em;
   text-align: center;
   background: #012F30;
   color: white;
@@ -33,7 +33,7 @@ header {
 }
 
 header h1 {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: normal;
   padding-top: 0.4em;
 }
@@ -125,6 +125,10 @@ header h1 {
 .mode-edit .button.active h2,
 .mode-edit .button.active p {
   background: #9793AD;
+}
+
+.bottom-button {
+  margin-top: 3.65em;
 }
 
 .bottom-button p {
