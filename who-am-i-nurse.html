@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Who Am I — palliative care nurse lens – Collaborative Record</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic" rel="stylesheet" type="text/css">
+    <link href="assets/css/prototyping-kit.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Mrs Lucy Mundey</h1>
+    </header>
+    <div data-screen="home">
+      <section class="callme">
+        <img src="assets/img/photograph.jpg" class="photo">
+        <h1>Call me Lou</h1>
+        <dl class="metadata">
+          <dt>Date of Birth:</dt>
+          <dd>18th July 1934, 82 years old</dd>
+
+          <dt>First language:</dt>
+          <dd>English</dd>
+
+          <dt>Main conditions:</dt>
+          <dd>COPD</dd>
+        </dl>
+
+      </section>
+      <section class="button">
+        <h2 data-accordion-button="allergies">Allergies<i class="fa fa-plus"></i></h2>
+        <p data-accordion="allergies">Penicillin</p>
+      </section>
+      <section class="button">
+        <h2 data-accordion-button="sight-hearing-movement">Sight, hearing and movement<i class="fa fa-plus"></i></h2>
+        <p data-accordion="sight-hearing-movement">Lou wears glasses and uses a frame to move around. Some hearing loss.</p>
+      </section>
+      <section class="button">
+        <h2 data-accordion-button="discussing">Discussing medical information<i class="fa fa-plus"></i></h2>
+        <p data-accordion="discussing">Talk to Lou’s daughter, Helen, but don’t share medical information with Lou’s son Richard.</p>
+      </section>
+      <section class="button">
+        <h2 data-accordion-button="spiritual">Spiritual beliefs<i class="fa fa-plus"></i></h2>
+        <p data-accordion="spiritual">Talk to Lou’s daughter, Hannah, but don’t share medical information with Lou’s son Richard.</p>
+      </section>
+      <section class="button">
+        <h2 data-accordion-button="important">Important to Lou<i class="fa fa-plus"></i></h2>
+        <p data-accordion="important">Lou has a pet cat, Dolly. She likes being appreciated for her sense of humour and the ability to make the best of every situation.</p>
+      </section>
+      <section class="button">
+        <h2 data-accordion-button="living">Living situation<i class="fa fa-plus"></i></h2>
+        <p data-accordion="living">Lou lives with her daughter, Helen.</p>
+      </section>
+    </div>
+
+    <div data-screen="my-health" class="fullscreen question-screen">
+      <p class="intro">Editing information about you</p>
+      <p class="steps">Step 1 / 1</p>
+      <p class="question">What would you like others to know about your health?</p>
+      <div class="stacked-buttons">
+        <div class="stacked-button" data-close-screen>
+          <p>Say it</p>
+        </div>
+        <div class="stacked-button" data-close-screen>
+          <p>Type it</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/prototyping-kit.js"></script>
+  <script src="assets/js/who-am-i.js"></script>
+</html>
