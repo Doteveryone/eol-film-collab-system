@@ -60,6 +60,22 @@ header h1 {
   padding: 1em;
 }
 
+.search {
+  background: #4D395E;
+  font-size: 22px;
+  padding: 0.3em 1em;
+}
+
+.search input {
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 0.4em 1em;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+}
+
 .button {
   border-top: 1px solid black;
 }
@@ -178,4 +194,17 @@ header h1 {
 
 .stacked-button:last-child {
   background: #43A4B3;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
 }
