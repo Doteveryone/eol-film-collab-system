@@ -72,6 +72,11 @@ header h1 {
   border-bottom: 1px solid black;
 }
 
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
 .button i, .bottom-button i {
   padding-top: 0.22em;
 }
