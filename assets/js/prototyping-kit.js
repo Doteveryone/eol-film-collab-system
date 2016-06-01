@@ -154,6 +154,61 @@ var ModeToggle = Backbone.View.extend({
   }
 });
 
+var More = Backbone.Model.extend({
+  toggle: function() {
+    if (this.get('more')) {
+      this.less();
+    } else {
+      this.more();
+    }
+  },
+
+  more: function() {
+    this.set('more', true);
+  },
+
+  less: function() {
+    this.unset('more');
+  }
+});
+
+var MoreButton = Backbone.View.extend({
+  initialize: function() {
+    this.listenTo(this.model, 'change', this.render);
+  },
+
+  events: {
+    'click': 'toggle'
+  },
+
+  toggle: function(event) {
+    event.preventDefault;
+    this.model.toggle();
+  },
+
+  render: function() {
+    if (this.model.get('more')) {
+      this.$el.addClass('more');
+    } else {
+      this.$el.removeClass('more');
+    }
+  }
+});
+
+var MoreContent = Backbone.View.extend({
+  initialize: function() {
+    this.listenTo(this.model, 'change', this.render);
+  },
+
+  render: function() {
+    if (this.model.get('more')) {
+      this.$el.show();
+    } else {
+      this.$el.hide();
+    }
+  }
+});
+
 var BarView = Backbone.View.extend({
   initialize: function() {
     this.name = this.el.dataset.bar;
@@ -309,6 +364,7 @@ var App = Backbone.Model.extend({
     this.setUpBars();
     this.setUpAccordions();
     this.setUpModeToggles();
+    this.setUpMoreButtons();
     this.showHomeScreen();
   },
 
@@ -378,6 +434,17 @@ var App = Backbone.Model.extend({
     _.each(modeToggleEls, function(modeToggle) {
       new ModeToggle({ el: modeToggle, model: this })
     }, this);
+  },
+
+  setUpMoreButtons: function() {
+    var moreContentEls = $('[data-more]');
+    _.each(moreContentEls, function(moreContentEl) {
+      var name = moreContentEl.dataset.more;
+      var moreButtonEl = $('[data-more-button=' + name + ']');
+      var more = new More();
+      new MoreContent({ model: more, el: moreContentEl });
+      new MoreButton({ model: more, el: moreButtonEl });
+    });
   },
 
   showHomeScreen: function() {

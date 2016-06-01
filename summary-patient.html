@@ -14,23 +14,27 @@
     <div data-screen="home" class="fullscreen no-pad">
       <img src="assets/img/notification_screen.png" data-open-screen="today" class="fullscreen-image">
     </div>
-    <div data-screen="today" class="fullscreen scroll no-pad">
-      <h1 class="fullscreen-title">Hello Lou</h1>
-      <h2 class="fullscreen-subtitle">Today</h2>
+    <header>
+      <h1>Hello Lou</h1>
+    </header>
+    <div data-screen="today">
+      <h2 class="fullscreen-subtitle">Today, </h2>
       <div class="day-summary">
         <h3 class="time">13:00am</h3>
-        <p class="intro">Take the blood-thinning tablets (warfarin).</p>
+        <p class="summary-item">Take the blood-thinning <strong>medication</strong> (warfarin).</p>
         <h3 class="time">13:30am</h3>
-        <p class="intro">You have a physio appointment at Green’s Physiotherapists. Remember to wear loose clothing.</p>
+        <p class="summary-item">You have a physio <strong>appointment</strong> at Green’s Physiotherapists. Remember to wear loose clothing.</p>
+        <div data-more="today">
+          <h3 class="time">14:30pm</h3>
+          <p class="summary-item">You have an <strong>appointment</strong> with your GP, Dr Ruth Wallis.</p>
+          <h3 class="time">18:00px</h3>
+          <p class="summary-item">Take the blood-thinning <strong>medication</strong> (warfarin).</p>
+        </div>
       </div>
       <section class="button">
-        <h2 data-accordion-button="read-more">Read more<i class="fa fa-plus"></i></h2>
+        <h2 data-more-button="today">See <span class="label-more">more</span><span class="label-less">less</span> for today<i class="fa fa-plus"></i></h2>
 
         <div data-accordion="read-more">
-          <h3>14:30pm</h3>
-          <p>You have an appointment with your GP, Dr Ruth Wallis.</p>
-          <h3>18:00px</h3>
-          <p>Take the blood-thinning tablets (warfarin).</p>
         </div>
       </section>
       <section class="button alt">
@@ -40,7 +44,7 @@
         <h2>Record</h2>
       </section>
       <section class="button alt">
-        <h2>Who am I</h2>
+        <a href="who-am-i.html#screen/home"><h2>Who am I</h2></a>
       </section>
       <div class="bottom-button">
         <p>I need help<i class="fa fa-question"></i></p>

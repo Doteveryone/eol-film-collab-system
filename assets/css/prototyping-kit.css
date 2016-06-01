@@ -143,6 +143,11 @@ p {
   line-height: 1.4;
 }
 
+[data-more] {
+  display: none;
+}
+
+
 [data-accordion] {
   display: none;
 }

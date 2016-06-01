@@ -11,6 +11,10 @@ body {
   font-family: 'Noto Sans', 'Open Sans', Segoe UI, Helvetica, Arial, sans-serif;
 }
 
+strong {
+  font-weight: bold;
+}
+
 [data-screen] {
   overflow-y: scroll;
   top: 3em;
@@ -53,7 +57,7 @@ header h1 {
   margin-bottom: 0.3em;
 }
 
-[data-accordion-button] i, .bottom-button i {
+.bottom-button i, .button i {
   float: right;
 }
 
@@ -97,7 +101,7 @@ header h1 {
   border-bottom: 1px solid black;
 }
 
-.button h2 a {
+.button a {
   color: white;
   text-decoration: none;
 }
@@ -189,6 +193,7 @@ a.floating-button {
 
 .fullscreen-subtitle {
   padding: 0 0.7em;
+  margin-top: 0.5em;
   margin-bottom: 0;
 }
 
@@ -216,6 +221,12 @@ a.floating-button {
   line-height: 1.2;
 }
 
+.summary-item {
+  font-size: 22px;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
 .intro {
   font-size: 22px;
   padding: 0 1em;
@@ -233,7 +244,7 @@ a.floating-button {
 }
 
 .day-summary {
-  margin-bottom: 1.5em;
+  margin: 0.5em 0 1.5em;
 }
 
 .stacked-buttons {
@@ -273,6 +284,18 @@ select {
   color: white;
   -webkit-font-smoothing: antialiased;
   background: #012F30 url(../img/triangle.svg) no-repeat 90vw 50%;
+}
+
+.label-less {
+  display: none;
+}
+
+.more .label-less {
+  display: inline;
+}
+
+.more .label-more {
+  display: none;
 }
 
 .scroll {
