@@ -22,6 +22,15 @@ body {
   top: 0;
   height: 100vh;
   padding: 1em;
+  overflow: hidden;
+}
+
+.fullscreen-image {
+  width: 100%;
+}
+
+.no-pad {
+  padding: 0;
 }
 
 header {
@@ -80,7 +89,7 @@ header h1 {
   border-top: 1px solid black;
 }
 
-.button.active {
+.button.active, .button.alt {
   border-top: 1px solid white;
 }
 
@@ -117,6 +126,11 @@ header h1 {
   border-bottom: 1px solid white;
 }
 
+.button.alt h2 {
+  background: #4D395E;
+  border-bottom: none;
+}
+
 .mode-edit .button h2,
 .mode-edit .button p {
   background: #BBB6CE;
@@ -145,6 +159,39 @@ header h1 {
   right: 0;
 }
 
+a.floating-button {
+  border-radius: 100px;
+  background: #4D395E;
+  width: 4em;
+  height: 4em;
+  display: inline-block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+
+.floating-button:active, .floating-button:focus {
+  background: #BBB6CE;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.floating-button i {
+  padding-top: 0.45em;
+}
+
+.fullscreen-title {
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+
+.fullscreen-subtitle {
+  padding: 0 0.7em;
+  margin-bottom: 0;
+}
+
 .metadata dt {
   font-weight: bold;
 }
@@ -170,12 +217,23 @@ header h1 {
 }
 
 .intro {
-  font-size: 24px;
+  font-size: 22px;
+  padding: 0 1em;
+  margin-bottom: 0;
+}
+
+.time {
+  font-size: 22px;
+  padding: 0 1em;
   margin-bottom: 0;
 }
 
 .steps {
   margin-bottom: 2em;
+}
+
+.day-summary {
+  margin-bottom: 1.5em;
 }
 
 .stacked-buttons {
@@ -215,6 +273,10 @@ select {
   color: white;
   -webkit-font-smoothing: antialiased;
   background: #012F30 url(../img/triangle.svg) no-repeat 90vw 50%;
+}
+
+.scroll {
+  overflow-y: auto;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
