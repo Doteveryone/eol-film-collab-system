@@ -163,6 +163,10 @@ header h1 {
   right: 0;
 }
 
+.bottom-button.alt p {
+  background: #139B9B;
+}
+
 a.floating-button {
   border-radius: 100px;
   background: #4D395E;
