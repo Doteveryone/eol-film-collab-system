@@ -116,7 +116,7 @@ header h1 {
   padding-top: 0.22em;
 }
 
-.button h2 {
+.button h2, .button.active h2.more {
   font-size: 22px;
   padding: 0.8em 1em;
   margin-bottom: 0;

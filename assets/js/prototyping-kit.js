@@ -155,6 +155,10 @@ var ModeToggle = Backbone.View.extend({
 });
 
 var More = Backbone.Model.extend({
+  initialize: function(app) {
+    this.app = app;
+  },
+
   toggle: function() {
     if (this.get('more')) {
       this.less();
@@ -204,6 +208,7 @@ var MoreContent = Backbone.View.extend({
     if (this.model.get('more')) {
       this.$el.show();
     } else {
+      this.model.app.scrollToTop();
       this.$el.hide();
     }
   }
@@ -253,12 +258,13 @@ var Screen = Backbone.Model.extend({
 
   close: function() {
     this.app.close();
-  }
+  },
 });
 
 var ScreenView = Backbone.View.extend({
   initialize: function() {
     this.listenTo(this.model, 'change', this.render);
+    this.listenTo(this.model.app, 'change:scrollToTop', this.scrollToTop);
     this.listenTo(this.model.app, 'change:mode', this.respondToMode);
     this.render();
   },
@@ -313,6 +319,10 @@ var ScreenView = Backbone.View.extend({
     } else {
       this.el.className = this.el.className.replace(/\bmode-.+?\b/g, '');
     }
+  },
+
+  scrollToTop: function() {
+    this.$el.scrollTop(0);
   },
 
   render: function() {
@@ -441,10 +451,10 @@ var App = Backbone.Model.extend({
     _.each(moreContentEls, function(moreContentEl) {
       var name = moreContentEl.dataset.more;
       var moreButtonEl = $('[data-more-button=' + name + ']');
-      var more = new More();
+      var more = new More(this);
       new MoreContent({ model: more, el: moreContentEl });
       new MoreButton({ model: more, el: moreButtonEl });
-    });
+    }, this);
   },
 
   showHomeScreen: function() {
@@ -457,6 +467,10 @@ var App = Backbone.Model.extend({
     return _.find(this.screens, function(screen) {
       return screen.name === name;
     });
+  },
+
+  scrollToTop: function() {
+    this.set('scrollToTop', Date.now);
   },
 
   openPopup: function(popup) {
