@@ -232,6 +232,19 @@ a.floating-button {
   margin-bottom: 0;
 }
 
+.help {
+  background: #012F30;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.help-intro {
+  text-align: center;
+  margin-top: -140px;
+}
+
 .metadata dt {
   font-weight: bold;
 }
@@ -254,6 +267,11 @@ a.floating-button {
   font-size: 36px;
   font-weight: bold;
   line-height: 1.2;
+}
+
+h2.large-question {
+  font-size: 1.75em;
+  padding: 1em 0.75em;
 }
 
 .summary-item {
@@ -312,6 +330,39 @@ a.floating-button {
   margin-bottom: 0;
 }
 
+.person {
+  height: 70vh;
+  margin: 5vh auto;
+  display: block;
+}
+
+.highlight {
+  color: rgb(19, 155, 155);
+}
+
+.info-overlay {
+  background: rgba(19, 155, 155, 0.8);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 1em;
+  position: absolute;
+}
+
+.info-overlay img {
+  max-width: 4em;
+  margin: 1.5em 0 1.5em 1em;
+  float: right;
+}
+
+.target {
+  max-width: 4em;
+  position: fixed;
+  margin-left: -2em;
+  margin-top: -2em;
+}
+
 select {
   padding: 0.8em 1em;
   margin: 0;
@@ -343,6 +394,10 @@ select {
 
 .scroll {
   overflow-y: auto;
+}
+
+.hidden {
+  display: none;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
