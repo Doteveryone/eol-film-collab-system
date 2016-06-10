@@ -37,6 +37,13 @@ a {
   width: 100%;
 }
 
+.dark-bg {
+  padding: 1em;
+  background: #012F30;
+  height: 100%;
+  width: 100%;
+}
+
 .no-pad {
   padding: 0;
 }
@@ -118,6 +125,47 @@ header h1 {
 
 .search.alt input:-moz-placeholder { /* Firefox 18- */
   color: #139B9B;
+}
+
+.faces li {
+  padding: 1em;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.faces img {
+  border-radius: 999px;
+  margin-right: 2em;
+  max-width: 120px;
+  opacity: 0.8;
+  display: block;
+}
+
+.faces span {
+  font-size: 24px;
+  display: block;
+}
+
+.faces .name {
+  font-weight: bold;
+}
+
+.faces .job {
+  color: #139B9B;
+}
+
+[data-tab-set] {
+  border: 2px solid #139B9B;
+}
+
+[data-tab] {
+  color:  #139B9B;
+  font-size: 26px;
+}
+
+[data-tab].open {
+  background:  #139B9B;
 }
 
 .button {
