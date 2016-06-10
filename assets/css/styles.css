@@ -468,6 +468,16 @@ select {
   display: none;
 }
 
+.security-token p {
+  padding: 0 1em;
+  margin: 0.5em 0 1.5em;
+}
+
+.security-token h2 {
+  font-size: 90px;
+  text-align: center;
+}
+
 .scroll {
   overflow-y: auto;
 }
