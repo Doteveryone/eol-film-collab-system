@@ -176,6 +176,11 @@ header h1 {
   color: #139B9B;
 }
 
+h2.consultation-meta {
+  margin-bottom: 0;
+  font-size: 130%;
+}
+
 [data-tab-set] {
   border: 2px solid #139B9B;
 }
@@ -245,6 +250,20 @@ header h1 {
   background: #9793AD;
 }
 
+.large-button {
+  margin: 1em 0;
+  border-radius: 1em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 130%;
+  display: block;
+  padding: 0.3em 0.5em;
+  background: #139B9B;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
 .bottom {
   position: fixed;
   bottom: 0;
@@ -281,7 +300,7 @@ a.floating-button {
   height: 4em;
   display: inline-block;
   text-align: center;
-  color: rgba(255, 255, 255, 0.9);
+  colorn: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.4);
   position: fixed;
   right: 1em;
@@ -337,6 +356,17 @@ a.floating-button {
   background: #152D31;
   color: white;
   -webkit-font-smoothing: antialiased;
+}
+
+.question-screen .metadata {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 140%;
+  line-height: 1.2;
+}
+
+.question-screen.alt {
+  background: #28656B;
 }
 
 .question {
@@ -439,6 +469,16 @@ h2.large-question {
   margin-top: -2em;
 }
 
+.notes {
+  list-style-type: disc;
+}
+
+.notes li {
+  border: none;
+  display: list-item;
+  margin-left: 1em;
+}
+
 select {
   padding: 0.8em 1em;
   margin: 0;
@@ -485,6 +525,71 @@ select {
 .hidden {
   display: none;
 }
+
+.speak-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.speak {
+  position: relative;
+  text-align: center;
+  margin-top: 1em;
+  width: 100%;
+  height: 10em;
+}
+
+.record-button {
+  background: rgba(19, 155, 155, 0.8);
+  border-radius: 9999px;
+  margin: 0 auto;
+  display: block;
+  width: 180px;
+  height: 180px;
+}
+
+.recording .record-button {
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.record-button-label {
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 37%;
+  width: 100%;
+  font-size: 130%;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  z-index: 300;
+}
+
+.speaking {
+  display: none;
+}
+
+.recording .speaking {
+  display: block;
+}
+
+.recording .waiting {
+  display: none;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: black;
