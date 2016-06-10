@@ -84,6 +84,12 @@ header h1 {
   color: white;
 }
 
+[data-popup] img {
+  max-width: 2.5em;
+  float: left;
+  margin-right: 0.75em;
+}
+
 [data-popup] .button-bar a:first-child {
   border-color: #139B9B;
 }
