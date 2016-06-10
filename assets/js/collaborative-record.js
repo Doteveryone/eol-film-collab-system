@@ -48,3 +48,57 @@ $('body').on('click', '.target', function() {
     maxWidth: 'none'
   });
 });
+
+// From the voice first day
+var RecordingButton = Backbone.View.extend({
+  initialize: function() {
+    this.listenTo(this.model, 'change:recording', this.render);
+  },
+
+  events: {
+    'click ': 'toggle'
+  },
+
+  toggle: function(event) {
+    event.preventDefault();
+    this.model.toggleRecording();
+  },
+
+  render: function() {
+    var recording = this.model.get('recording');
+
+    if (recording) {
+      this.$el.addClass('recording');
+    } else {
+      this.$el.removeClass('recording');
+    }
+  }
+});
+
+var VoiceApp = Backbone.Model.extend({
+  initialize: function() {
+    this.setUpRecordingButton();
+  },
+
+  setUpRecordingButton: function() {
+    var buttonEl = document.getElementsByClassName('speak')[0];
+
+    new RecordingButton({ model: this, el: buttonEl });
+  },
+
+  toggleRecording: function() {
+    var recording = this.get('recording');
+
+    if (recording) {
+      this.unset('recording');
+    } else {
+      this.set('recording', true);
+    }
+
+  },
+
+});
+
+
+var voiceApp = new VoiceApp();
+
