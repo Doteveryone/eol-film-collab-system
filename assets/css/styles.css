@@ -127,11 +127,17 @@ header h1 {
   color: #139B9B;
 }
 
+.top-border {
+  border-top: 1px solid black;
+}
+
 .faces li {
   padding: 1em;
   margin-top: 0;
   display: flex;
   align-items: center;
+  background: white;
+  color: black;
 }
 
 .faces img {
@@ -222,6 +228,13 @@ header h1 {
 .mode-edit .button.active h2,
 .mode-edit .button.active p {
   background: #9793AD;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .bottom-button {
