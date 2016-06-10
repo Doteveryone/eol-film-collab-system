@@ -79,6 +79,15 @@ header h1 {
   -webkit-font-smoothing: antialiased;
 }
 
+[data-popup], [data-bar] {
+  background: #139B9B;
+  color: white;
+}
+
+[data-popup] .button-bar a:first-child {
+  border-color: #139B9B;
+}
+
 .callme {
   padding: 1em;
 }
