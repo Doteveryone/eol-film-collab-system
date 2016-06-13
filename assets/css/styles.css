@@ -221,7 +221,7 @@ h2.consultation-meta {
   padding-top: 0.22em;
 }
 
-.button h2, .button.active h2.more {
+.button h2, .button.active h2.more, .button-inner {
   font-size: 22px;
   padding: 0.8em 1em;
   margin-bottom: 0;
@@ -316,6 +316,26 @@ a.floating-button {
   padding-top: 0.45em;
 }
 
+.button-inner span {
+  font-size: 22px;
+}
+
+.inner-left {
+  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.inner-left h3 {
+  margin: 0;
+}
+
+.inner-right {
+  width: 23%;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .fullscreen-title {
   padding: 0.5em;
   margin-bottom: 0;
@@ -325,6 +345,11 @@ a.floating-button {
   padding: 0 0.7em;
   margin-top: 0.5em;
   margin-bottom: 0;
+}
+
+time {
+  font-weight: bold;
+  font-size: 120%;
 }
 
 .help {
