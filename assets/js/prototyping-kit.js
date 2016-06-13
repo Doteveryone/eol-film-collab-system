@@ -241,6 +241,65 @@ var BarView = Backbone.View.extend({
 });
 
 
+var TabSet = Backbone.Model.extend({
+  open: function(tab) {
+    this.set('open', tab);
+  },
+
+  addTab: function(tab) {
+    if (this.tabs) {
+      this.tabs.push(tab);
+      this.open(this.tabs[0]);
+    } else {
+      this.tabs = []
+    }
+  }
+});
+
+var Tab = Backbone.View.extend({
+  initialize: function() {
+    this.name = this.$el.data('tab');
+    if (this.$el.data('tab-open') == '') {
+      this.model.open(this.name);
+    }
+    this.listenTo(this.model, 'change', this.render);
+    this.render();
+  },
+
+  events: {
+    'click': 'open'
+  },
+
+  open: function(event) {
+    event.preventDefault();
+    this.model.open(this.name);
+  },
+
+  render: function() {
+    if (this.model.get('open') === this.name) {
+      this.$el.addClass('open');
+    } else {
+      this.$el.removeClass('open');
+    }
+  }
+});
+
+var TabContent = Backbone.View.extend({
+  initialize: function() {
+    this.name = this.$el.data('tab-content');
+    this.listenTo(this.model, 'change', this.render);
+    this.render();
+  },
+
+  render: function() {
+    if (this.model.get('open') === this.name) {
+      this.$el.show();
+    } else {
+      this.$el.hide();
+    }
+  }
+});
+
 var Screen = Backbone.Model.extend({
   initialize: function(el, app) {
     this.name = $(el).attr('data-screen');
@@ -375,6 +434,7 @@ var App = Backbone.Model.extend({
     this.setUpAccordions();
     this.setUpModeToggles();
     this.setUpMoreButtons();
+    this.setUpTabs();
     this.showHomeScreen();
   },
 
@@ -454,6 +514,27 @@ var App = Backbone.Model.extend({
       var more = new More(this);
       new MoreContent({ model: more, el: moreContentEl });
       new MoreButton({ model: more, el: moreButtonEl });
+    }, this);
+  },
+
+  setUpTabs: function() {
+    var tabSetEls = $('[data-tab-set]');
+
+    _.each(tabSetEls, function(tabSetEl) {
+
+      var tabSet = new TabSet();
+      var tabEls = $(tabSetEl).find('[data-tab]');
+
+      _.each(tabEls, function(tabEl) {
+        var name = tabEl.dataset.tab;
+        var content = $('[data-tab-content='+name+']')[0];
+
+        tabSet.addTab(name);
+        new Tab({ model: tabSet, el: tabEl });
+        new TabContent({ model: tabSet, el: content });
+
+      }, this);
+
     }, this);
   },
 
