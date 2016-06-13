@@ -459,8 +459,12 @@ var App = Backbone.Model.extend({
 
   showHomeScreen: function() {
     var homeScreen = this.findScreen('home');
-    homeScreen.show();
-    this.updateURL();
+    if (typeof homeScreen === 'undefined') {
+      console.log('No home screen has been set. Add \'data-screen="home"\' to the HTML element you want to be show first to fix this error')
+    } else {
+      homeScreen.show();
+      this.updateURL();
+    }
   },
 
   findScreen: function(name) {
@@ -518,4 +522,3 @@ var App = Backbone.Model.extend({
 var app = new App();
 var router = new Router(app);
 Backbone.history.start();
-
