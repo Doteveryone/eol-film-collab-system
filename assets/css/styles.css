@@ -94,7 +94,11 @@ header h1 {
   border-color: #139B9B;
 }
 
+<<<<<<< HEAD
 .callme, .pickups-summary {
+=======
+.callme {
+>>>>>>> master
   padding: 1em;
 }
 
