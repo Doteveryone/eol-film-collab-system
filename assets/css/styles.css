@@ -61,6 +61,12 @@ header h1 {
   padding-top: 0.4em;
 }
 
+header span {
+  position: absolute;
+  margin-left: 0.75em;
+  left: 0px;
+}
+
 .photo {
   border-radius: 90px;
   max-width: 30vw;
@@ -403,6 +409,10 @@ time {
 h2.large-question {
   font-size: 1.75em;
   padding: 1em 0.75em;
+}
+
+.summary {
+  margin-bottom: 1em;
 }
 
 .summary-item {

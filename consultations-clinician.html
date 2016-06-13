@@ -11,14 +11,12 @@
   </head>
 
   <body>
-    <header>
-      <h1>Today’s consultations</h1>
-    </header>
-    <div data-screen="home">
-      <section class="button">
+    <div data-screen="home" class="fullscreen no-pad">
+      <header><h1>Today’s consultations</h1></header>
+      <section class="button" data-open-screen="consultation">
         <div class="button-inner">
           <div class="inner-left">
-            <h3>Lucy Marshall</h3>
+            <h3>Lucy Mundey</h3>
             <span>3 new notes</span>
           </div>
           <div class="inner-right">
@@ -27,7 +25,7 @@
           </div>
         </div>
       </section>
-      <section class="button">
+      <section class="button" data-open-screen="consultation">
         <div class="button-inner">
           <div class="inner-left">
             <h3>Fatima Niamh</h3>
@@ -39,7 +37,7 @@
           </div>
         </div>
       </section>
-      <section class="button">
+      <section class="button" data-open-screen="consultation">
         <div class="button-inner">
           <div class="inner-left">
             <h3>Stuart Baker</h3>
@@ -50,7 +48,7 @@
           </div>
         </div>
       </section>
-      <section class="button">
+      <section class="button" data-open-screen="consultation">
         <div class="button-inner">
           <div class="inner-left">
             <h3>Mark Robbin</h3>
@@ -62,7 +60,7 @@
           </div>
         </div>
       </section>
-      <section class="button">
+      <section class="button" data-open-screen="consultation">
         <div class="button-inner">
           <div class="inner-left">
             <h3>Yasmin Durr</h3>
@@ -73,7 +71,7 @@
           </div>
         </div>
       </section>
-      <section class="button">
+      <section class="button" data-open-screen="consultation">
         <div class="button-inner">
           <div class="inner-left">
             <h3>Kim Harrison</h3>
@@ -83,6 +81,25 @@
             <span>Single</span>
           </div>
         </div>
+      </section>
+    </div>
+
+    <div data-screen="consultation" class="fullscreen no-pad">
+      <header><h1><span data-open-screen="home">&lt;</span>Consultations</h1></header>
+      <div class="summary">
+        <h2 class="fullscreen-subtitle">Lucy Mundey<br>10:00</h2>
+      </div>
+      <section class="button">
+        <h2>3 new notes from Lucy</h2>
+      </section>
+      <section class="button">
+        <h2>Recorded consultation</h2>
+      </section>
+      <section class="button">
+        <h2>Your notes</h2>
+      </section>
+      <section class="button">
+        <h2>Previous consultations</h2>
       </section>
     </div>
   </body>
