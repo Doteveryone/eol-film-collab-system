@@ -539,10 +539,7 @@ var App = Backbone.Model.extend({
   },
 
   showHomeScreen: function() {
-<<<<<<< HEAD
     var homeScreen = this.findScreen('home');
-=======
->>>>>>> master
     if (typeof homeScreen === 'undefined') {
       console.log('No home screen has been set. Add \'data-screen="home"\' to the HTML element you want to be show first to fix this error')
     } else {
