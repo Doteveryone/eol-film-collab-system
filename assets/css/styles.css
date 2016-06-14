@@ -61,6 +61,12 @@ header h1 {
   padding-top: 0.4em;
 }
 
+header span {
+  position: absolute;
+  margin-left: 0.75em;
+  left: 0px;
+}
+
 .photo {
   border-radius: 90px;
   max-width: 30vw;
@@ -69,6 +75,37 @@ header h1 {
 
 .bottom-button i, .button i {
   float: right;
+}
+
+.top-bar {
+  width: 100vw;
+  font-size: 120%;
+}
+
+.top-bar p {
+  margin-bottom: 0;
+  padding: 0.5em 0.75em;
+}
+
+.top-bar i {
+  margin-right: 0.5em;
+}
+
+.info {
+  background: #f2dede;
+  color: #a94442;
+}
+
+[contenteditable] {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 0.75em;
+  font-size: 120%;
+}
+
+[contenteditable]:focus {
+  border: none;
+  outline: none;
 }
 
 [data-accordion] {
@@ -414,6 +451,10 @@ time {
 h2.large-question {
   font-size: 1.75em;
   padding: 1em 0.75em;
+}
+
+.summary {
+  margin-bottom: 1em;
 }
 
 .summary-item {
