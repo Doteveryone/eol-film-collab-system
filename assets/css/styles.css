@@ -94,7 +94,7 @@ header h1 {
   border-color: #139B9B;
 }
 
-.callme {
+.callme, .pickups-summary {
   padding: 1em;
 }
 
@@ -221,13 +221,24 @@ h2.consultation-meta {
   padding-top: 0.22em;
 }
 
-.button h2, .button.active h2.more {
+.button h2, .button.active h2.more, .button-inner {
   font-size: 22px;
   padding: 0.8em 1em;
   margin-bottom: 0;
   background: #139B9B;
   color: white;
   -webkit-font-smoothing: antialiased;
+}
+
+.button-disabed .button-inner {
+  background: repeating-linear-gradient(
+    30deg,
+    #139B9B,
+    #139B9B 10px,
+    #424242 10px,
+    #424242 12px
+  );
+  color: #E0E0E0;
 }
 
 .button.active h2 {
@@ -316,6 +327,26 @@ a.floating-button {
   padding-top: 0.45em;
 }
 
+.button-inner span {
+  font-size: 22px;
+}
+
+.inner-left {
+  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.inner-left h3 {
+  margin: 0;
+}
+
+.inner-right {
+  width: 23%;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .fullscreen-title {
   padding: 0.5em;
   margin-bottom: 0;
@@ -325,6 +356,11 @@ a.floating-button {
   padding: 0 0.7em;
   margin-top: 0.5em;
   margin-bottom: 0;
+}
+
+time {
+  font-weight: bold;
+  font-size: 120%;
 }
 
 .help {
