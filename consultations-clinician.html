@@ -95,12 +95,25 @@
       <section class="button">
         <h2>Recorded consultation</h2>
       </section>
-      <section class="button">
+      <section class="button" data-open-screen="add-notes">
         <h2>Your notes</h2>
       </section>
       <section class="button">
         <h2>Previous consultations</h2>
       </section>
+    </div>
+
+    <div data-screen="add-notes" class="fullscreen no-pad">
+      <div class="top-bar info"><p><i class="fa fa-exclamation-circle"></i>Only clinicians can view this</p></div>
+      <p contenteditable="true">Your notes</p>
+      <div class="stacked-buttons">
+        <div class="stacked-button" data-close-screen>
+          <p>Cancel</p>
+        </div>
+        <div class="stacked-button" data-close-screen>
+          <p>Add</p>
+        </div>
+      </div>
     </div>
   </body>
   <script src="assets/js/prototyping-kit.js"></script>

@@ -22,6 +22,7 @@ $('.info-overlay').click(function() {
 
 $('body').click(function() {
   $('.info-overlay').fadeOut();
+  $('[contenteditable=true]').focus();
 });
 
 $('.person').click(function(event) {
@@ -48,6 +49,7 @@ $('body').on('click', '.target', function() {
     maxWidth: 'none'
   });
 });
+
 
 // From the voice first day
 var RecordingButton = Backbone.View.extend({
