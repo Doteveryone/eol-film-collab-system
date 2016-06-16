@@ -11,6 +11,48 @@
   </head>
 
   <body>
+    <header><h1>Medication</h1></header>
+
+    <div data-screen="home">
+      <section class="callme">
+        <h3>Lucy Mundey</h3>
+        <dl class="metadata">
+          <dt>NHS# 123 456 789</dt>
+          <dl>18th July 1934, 82 years old</dl>
+        </dl>
+      </section>
+      <section class="button notification" data-open-screen="active">
+        <h2>Active<i class="fa fa-exclamation-circle"></i></h2>
+      </section>
+      <section class="button">
+        <h2>Repeat</h2>
+      </section>
+      <section class="button">
+        <h2>Acute</h2>
+      </section>
+      <section class="button">
+        <h2>As required</h2>
+      </section>
+      <section class="button">
+        <h2>Historical</h2>
+      </section>
+    </div>
+
+    <div data-screen="active" class="fullscreen no-pad">
+      <header>
+        <span data-open-screen="home" class="left pad-top larger"><i class="fa fa-chevron-left"></i></span>
+        <h1>Active medication</h1>
+      </header>
+      <h2>Ace inhibitor</h2>
+      <h2>Ramipril</h2>
+      <ul class="messages">
+        <li class="message">
+          <img src="assets/img/avatar.svg">
+          <p>Quinapril not available. Substituted with Ramipril.</p>
+          <p class="author">Shepherds Bush Pharmacy 17.03.16</p>
+        </li>
+      </ul>
+    </div>
   </body>
   <script src="assets/js/prototyping-kit.js"></script>
   <script src="assets/js/collaborative-record.js"></script>
