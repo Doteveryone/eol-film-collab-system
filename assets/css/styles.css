@@ -48,6 +48,10 @@ a {
   padding: 0;
 }
 
+.overflow {
+  overflow-y: scroll;
+}
+
 header {
   height: 3em;
   text-align: center;
