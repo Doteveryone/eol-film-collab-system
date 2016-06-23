@@ -809,6 +809,15 @@ select {
   100% {transform: scale(1);}
 }
 
+#ptr {
+  background: rgb(19, 155, 155);
+  padding: 0.5em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: black;
