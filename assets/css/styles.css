@@ -406,10 +406,11 @@ h2.consultation-meta {
 }
 
 .bottom-button {
-  margin-top: 3.65em;
+  margin-top: 70px;
 }
 
 .bottom-button p {
+  height: 70px;
   font-size: 22px;
   font-weight: bold;
   padding: 0.8em 1em;
