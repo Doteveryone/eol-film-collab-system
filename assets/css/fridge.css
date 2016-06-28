@@ -75,6 +75,18 @@ h1 {
   margin-left: 0vw;
 }
 
+@media (max-width: 600px) {
+  .tile.secondary {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .tile.secondary.last {
+    margin-left: 8vw;
+  }
+
+}
+
 .tile p {
   margin-bottom: 0;
   line-height: 1.4;
@@ -136,6 +148,13 @@ time span {
 .large-tile-inner p:last-child {
   margin-bottom: 0;
 }
+
+@media (max-width: 600px) {
+  .large-tile-inner {
+    padding: 1.5em 2em 1.5em 4em;
+  }
+}
+
 
 .large-tile img {
   display: block;
