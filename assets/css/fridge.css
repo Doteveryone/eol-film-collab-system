@@ -18,6 +18,12 @@ body {
   font-family: 'BreezeSans', 'Noto Sans', 'Open Sans', Segoe UI, Helvetica, Arial, sans-serif;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 100%;
+  }
+}
+
 strong {
   font-weight: bold;
 }
