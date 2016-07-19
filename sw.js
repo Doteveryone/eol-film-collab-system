@@ -5,16 +5,9 @@ self.addEventListener('install', function(event) {
     caches.open('collaborative-record').then(function(cache) {
       return cache.addAll([
         'index.html',
-        'activity-history.html',
         'consultation-patient.html',
-        'consultations-clinician.html',
-        'contacts-patient.html',
-        'permissions-clinician.html',
-        'security-token.html',
-        'summary-family-member.html',
         'summary-patient.html',
         'summary-transport.html',
-        'visual-symptom-locator-patient.html',
         'who-i-am-nurse.html',
         'who-i-am-patient.html',
         'assets/css/prototyping-kit.css',
