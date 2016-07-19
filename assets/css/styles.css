@@ -569,6 +569,11 @@ h2.large-question {
   margin-bottom: 0;
 }
 
+.question-intro {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
 .time {
   font-size: 22px;
   padding: 0 1em;
