@@ -398,6 +398,15 @@ h2.consultation-meta {
   -webkit-font-smoothing: antialiased;
 }
 
+.large-button:visited {
+  color: white;
+}
+
+.large-button:hover, .large-button:focus, .large-button:active {
+  color: white;
+  background: #4D395E;
+}
+
 .bottom {
   position: fixed;
   bottom: 0;
